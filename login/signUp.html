@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div id="box">
+        <form id="form">
+            <h4>email</h4>
+            <input type="text" id="email" placeholder="email">
+            <h4>Password</h4>
+            <input type="text" id="password" placeholder="password">
+            <h4>Mobile Number</h4>
+            <input type="number" id="number" placeholder="mobile number">
+           <input type="submit" id="signup" placeholder="signup">
+           <p>already have an account?</p>
+            <input type="submit" id="login" placeholder="login">
+        </form>
+    </div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",signup);
+    document.querySelector("#login").addEventListener("click",loggedIn);
+    function loggedIn(){
+        window.location.href="login.html"
+    }
+
+    let Arr=JSON.parse(localStorage.getItem("dataList"))||[]
+    function signup(){
+        event.preventDefault();
+        let obj={
+            email:document.querySelector("#email").value,
+            password:document.querySelector("#password").value,
+            number:document.querySelector("#number").value,
+
+        }
+        if(obj.email==""||obj.password==""||obj.mobile){
+            alert("All flieds are mandatory")
+            return;
+        }
+    Arr.push(obj);
+    console.log(Arr);
+    localStorage.setItem("dataList",JSON.stringify(Arr));
+    alert("Successfully Signup");
+    }
+</script>

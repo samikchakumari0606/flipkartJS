@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="icon" href="https://www.citypng.com/public/uploads/preview/flipkart-logo-icon-hd-png-11664324777lywvxb7wvs.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+        }
+        #nav{
+           
+            background-color: #2874f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:10px 0px;
+             position:sticky;
+            top:0px; 
+        }
+        
+        .logo>p{
+            color:white;
+            position: relative;
+            top:-5px;
+        }
+        .logo a>img{
+            height:20px;
+            width:75px;
+        }
+       .logo #plus{
+        color:yellow;
+        font-weight: 900;
+       }
+       .search{
+        height:20px;
+        width:420px;
+        background-color: white;
+        padding:8px;
+        width:400px;
+        margin: 0px 15px;
+        display: flex;
+        justify-content: space-between;
+        color:#2874f0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius:2px;
+       }
+       .search input{
+        width:400px;
+        border: none;
+        font-size: 14px;
+        
+       }
+       .navLink{
+        margin:0px 10px;
+        color:white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight:500
+       }
+       .down{
+        font-size:10px;
+       }
+
+       #box{
+        height:800px;
+        width:80%;
+       
+        margin: auto;
+        margin-top:2%;
+        display:flex;
+       }
+       #address{
+        height:100%;
+        width:60%;
+       
+       }
+       #add{
+        height:60px;
+        width:100%;
+        border: 1px solid gainsboro;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       }
+       #add button{
+        height:50px;
+        width:100px;
+        background-color: aliceblue;
+        color:blue;
+        border:none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius:2px;
+       }
+       #new{
+        font-weight: bold;
+
+       }
+       #box2{
+        height:740px;
+        width:100%;
+        border: 1px solid gainsboro;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       }
+     
+       #box2 img{
+        width:30%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       }
+
+       #price{
+        height:300px;
+        width:40%;
+        border: 1px solid gainsboro;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-left:2%;
+       }
+       #submit{
+        width:150px;
+        height:50px;
+        background-color: rgb(255, 106, 0);
+        color:white;
+        border: none;
+        margin-left: 1%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="logo">
+            <a href="./home.html"> <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"></a>
+            <p>Explore <span id="plus">Plus</span>
+                <img width="10px" height="10px" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png">
+            </p>
+        </div>
+        <div class="search" >
+        <input type="text" placeholder="Search for products,brands and more">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        
+        
+        <a href="#" class="navLink">Flipkart
+            <i class="fa-solid fa-chevron-down down" ></i>
+            
+        </a>
+        <a href="./seller.html" class="navLink">Become a seller</a>
+        <a href="#" class="navLink">More
+            <i class="fa-solid fa-chevron-down down" ></i>
+        </a>
+        <a href="#" class="navLink">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart</a> 
+            <div id="item_count">0</div>
+
+    </nav>
+    
+
+    <!-- container -->
+    <div id="box">
+<div id="address">
+    <div id="add">
+        <div>
+            <p>&nbsp&nbspDeliver to <span id="new">Manas Prasad ,835223</span></p>
+            <p>&nbsp&nbsp77,Gulzar Gali Simdega,Jharkhand</p>
+        </div>
+       <div>
+        <button>change</button>
+       </div>
+        
+    </div>
+
+
+     <!-- cart -->
+    
+    <div id="box2"></div>
+
+
+</div>
+<div id="price" ><br>
+
+    <h3>Price Details</h3>
+    <hr>
+    <br>
+    <br>
+    <h2 id="cart_total">Total Price:</h2><br>
+    <button id="submit" onclick="checkout()">place order</button>
+</div>
+    </div>
+
+
+    
+
+   
+</body>
+</html>
+<script type="module" src="./addToCart.js"></script>

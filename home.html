@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Home Page</title>
+    <link rel="icon" href="https://www.citypng.com/public/uploads/preview/flipkart-logo-icon-hd-png-11664324777lywvxb7wvs.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+           
+            background-color: #2874f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:10px 0px;
+             /* position:sticky;
+            top:0px;  */
+        }
+        
+        .logo>p{
+            color:white;
+            position: relative;
+            top:-5px;
+        }
+       .logo a>img{
+            height:20px;
+            width:75px;
+        }
+       .logo #plus{
+        color:yellow;
+        font-weight: 900;
+       }
+       .search{
+        height:20px;
+        width:420px;
+        background-color: white;
+        padding:8px;
+        width:400px;
+        margin: 0px 15px;
+        display: flex;
+        justify-content: space-between;
+        color:#2874f0;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius:2px;
+       }
+       .search input{
+        width:400px;
+        border: none;
+        font-size: 14px;
+        
+       }
+       .navLink{
+        margin:0px 10px;
+        color:white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight:500
+       }
+       .down{
+        font-size:10px;
+       }
+
+       #first{
+        height:80px;
+        width:100%;
+        margin-top:1ex;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #box1{
+        height:100%;
+        width:70%;
+        margin: auto;
+       
+        display: flex;
+        
+      }
+      .offers{
+        height:100%;
+        width:10%;
+      
+        margin-left:1%;
+        text-align: center;
+       
+      }
+      .offers>img{
+        width:100%;
+        height:60%;
+      }
+      #box1>div>a{
+        text-decoration: none;
+        color:black;
+      }
+
+       #ss{
+        height:350px;
+        width:100%;
+       
+        margin-top:1ch;
+      } 
+
+     #ss img{
+        width:100%;
+        height:100%;
+     }
+    
+     .ing{
+        height:350px;
+        width:100%;
+      
+        margin-top:1ch;
+     }
+
+
+
+     .cell{
+    width:18%;
+    height:300px;
+    margin:15px;
+    overflow: hidden;
+    border-radius: 8px;
+    /* transition:1s; */
+}
+.cell img{
+    width:100%;
+    height:95%;
+    object-fit: cover;
+}
+
+/* .cell:hover{
+transform:scale(1.3);
+z-index:2;
+} */
+
+.cell #new{
+    width:80%;
+   
+}
+#footer{
+  height:250px;
+  width:100%;
+ 
+  background-color: rgb(19, 19, 50);
+  margin-top:1ch;
+}
+.last{
+  height:100%;
+  width:90%;
+ 
+  margin:auto;
+  display: flex;
+}
+.lastdiv{
+  height:80%;
+  width:19%;
+  
+  margin-left:1%;
+  margin-top:3ch;
+}
+hr{
+  color:white;
+}
+
+.white{
+  color:white;
+  line-height:3ch;
+}
+.whity{
+  color:white;
+}
+.grey{
+  color:rgb(114, 112, 112);
+}
+#foot{
+  height:70px;
+  width:100%;
+  background-color: rgb(19, 19, 50);
+  display: flex;
+}
+.ffoot{
+  height:60%;
+  width:15%;
+ 
+ margin-left:6%;
+ display: flex;
+ margin-top:1%;
+ justify-content: center;
+ align-items: center;
+}
+.ffoot>img{
+  width:20%;
+  height:60%;
+}
+#fffoot{
+  height:60%;
+  width:30%;
+  
+  margin-top:1%;
+}
+#fffoot>img{
+  width:100%;
+}
+
+
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+      <a href="./home.html"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"></a>
+        
+        <p>Explore <span id="plus">Plus</span>
+            <img width="10px" height="10px" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png">
+        </p>
+    </div>
+    <div class="search" >
+<input type="text" placeholder="Search for products,brands and more">
+<i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+
+    <a href="#" class="navLink">Flipkart
+        <i class="fa-solid fa-chevron-down down" ></i>
+        
+    </a>
+    <a href="./seller.html" class="navLink">Become a seller</a>
+    <a href="#" class="navLink">More
+        <i class="fa-solid fa-chevron-down down" ></i>
+    </a>
+    <a href="./addToCart.html" class="navLink">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart</a>
+        
+</nav>
+
+
+<!-- first container -->
+<div id="first">
+<div id="box1">
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+    <a href="./offers.html">Top Offers</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100">
+    <a href="./grocery.html">Grocery</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100">
+    <a href="#">Mobiles</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100">
+    <a href="#">Fashion</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100">
+    <a href="./electronics.html">Electronics</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100">
+    <a href="#">Home</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100">
+    <a href="#">Application</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100">
+    <a href="#">Travel</a>
+  </div>
+  <div class="offers">
+    <img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
+    <a href="#">Toys</a>
+  </div>
+  <div class="offers"> <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100">
+    <a href="#">2-wheller</a>
+</div>  
+</div>
+</div>
+
+
+<!-- automatic slideshow -->
+<div id="ss"></div>
+
+<!-- first crouser -->
+
+    <div class="ing">
+        
+        <div class="main-carousel">
+          <div class="cell"><img src="./pic/f1.png"> </div>
+          <div class="cell"><img src="./pic/f2.png"></div>
+          <div class="cell"><img src="./pic/f3.png"></div>
+          <div class="cell"><img src="./pic/f5.png"></div>
+          <div class="cell"><img src="./pic/f6.png"></div>
+          <div class="cell"><img src="./pic/f7.png"></div>
+         <div class="cell"><img src="./pic/f9.png"></div>
+        
+        </div> 
+    
+    
+      </div>
+
+
+      
+    <div class="ing">
+        
+        <div class="main-carousel">
+          <div class="cell"><img src="./pic/a1.png"> </div>
+          <div class="cell"><img src="./pic/a2.png"></div>
+          <div class="cell"><img src="./pic/a3.png"></div>
+          <div class="cell"><img src="./pic/a4.png"></div>
+          <div class="cell"><img src="./pic/a5.png"></div>
+          <div class="cell"><img src="./pic/a6.png"></div>
+         <div class="cell"><img src="./pic/a7.png"></div>
+         <div class="cell"><img src="./pic/a4.png"></div>
+        
+        </div> 
+    
+    
+      </div>
+
+
+      <div class="ing">
+        
+        <div class="main-carousel">
+          <div class="cell"><img src="./pic/w1.png"> </div>
+          <div class="cell"><img src="./pic/w2.png"></div>
+          <div class="cell"><img src="./pic/w3.png"></div>
+          <div class="cell"><img src="./pic/w4.png"></div>
+          <div class="cell"><img src="./pic/w5.png"></div>
+          <div class="cell"><img src="./pic/w6.png"></div>
+         <div class="cell"><img src="./pic/w7.png"></div>
+         <div class="cell"><img src="./pic/w8.png"></div>
+         <div class="cell"><img src="./pic/w9.png"></div>
+        
+        </div> 
+    
+    
+      </div>
+
+
+      <div class="ing">
+        
+        <div class="main-carousel">
+          <div class="cell"><img src="./pic/y1.png"> </div>
+          <div class="cell"><img src="./pic/y2.png"></div>
+          <div class="cell"><img src="./pic/y3.png"></div>
+          <div class="cell"><img src="./pic/y4.png"></div>
+          <div class="cell"><img src="./pic/y5.png"></div>
+          <div class="cell"><img src="./pic/y6.png"></div>
+         <div class="cell"><img src="./pic/y7.png"></div>
+         <div class="cell"><img src="./pic/y8.png"></div>
+         
+        
+        </div> 
+    
+    
+      </div>
+
+
+      <!-- footer -->
+      <footer id="footer">
+        
+      </footer>
+
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script type="text/javascript">
+$('.main-carousel').flickity({
+// options
+cellAlign: 'left',
+wrapAround:true,
+freeScroll:true,
+});
+</script>
+
+    
+</body>
+</html>
+<script>
+function slideshow(){
+
+    const imgArr=
+    ["https://www.addictioncenter.com/app/uploads/2020/01/online_shopping_addiction-scaled.jpeg",
+   
+"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F02%2F22%2F5-polite-things-you-do-at-the-grocery-store-that-are-actually-quite-rude.jpg&q=60",
+"https://i.ytimg.com/vi/tDvjQp1BaWA/maxresdefault.jpg"
+]
+
+
+let imgdiv=document.getElementById("ss");
+let img=document.createElement("img");
+let i=0;
+img.src=imgArr[0];
+imgdiv.append(img)
+i++;
+setInterval(function(){
+ 
+    if(i==3){
+        i=0;
+    }
+    img.src=imgArr[i]
+    i++;
+    imgdiv.append(img)
+},2000)
+
+}
+slideshow();
+</script>
+<script type="module" src="./home.js"></script>

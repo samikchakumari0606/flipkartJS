@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <div id="box2">
+        <form id="form">
+            <h4>Email</h4>
+            <input placeholder="email" id="email" type="text" />
+            <h4>Password</h4>
+            <input type="password" id="pass" placeholder="password" />
+            <input id="login" type="submit" value="Log In" />
+        </form>
+       
+    </div>
+</body>
+</html>
+<script>
+    let form=document.querySelector("form");
+    let Arr=JSON.parse(localStorage.getItem("dataList"))||[]
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+
+        if(Arr.length==0){
+            alert("No user found")
+            return
+        }
+        let obj={
+            email:document.querySelector("#email").value,
+            password:document.querySelector("#pass").value,
+        }
+
+    let flag=true
+        Arr.forEach(function(ele){
+            if(ele.email==obj.email && ele.password==obj.password){
+            flag=false;
+            localStorage.setItem("login",JSON.stringify(ele));
+            alert("login in succesfully")
+            }
+            if(flag==true){
+                alert("User does not found")
+            }
+        })
+
+       console.log("ok")
+    })
+</script>
